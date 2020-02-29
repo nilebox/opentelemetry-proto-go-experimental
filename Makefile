@@ -16,4 +16,4 @@ endef
 gen-go:
 	$(foreach file,$(PROTO_FILES),$(call exec-command,protoc --go_out=plugins=grpc:$(GOPATH)/src $(file)))
 	rm -rf ./$(GENDIR)/go
-	cp -R $(GOPATH)/src/github.com/open-telemetry/opentelemetry-proto/$(GENDIR)/go ./gen/
+	cp -R $(GOPATH)/src/github.com/nilebox/opentelemetry-proto-go-experimental/$(GENDIR) ./gen/
