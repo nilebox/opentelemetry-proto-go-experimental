@@ -14,6 +14,8 @@ import (
 	math "math"
 )
 
+// SOME CHANGE TO TEST CHECKSUM VERIFICATION
+
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
 var _ = fmt.Errorf
