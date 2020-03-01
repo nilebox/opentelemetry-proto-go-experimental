@@ -1,0 +1,9 @@
+sudo: required
+dist: xenial
+language: go
+
+install:
+  -  ./proto/install-proto.sh
+
+script:
+  - ./verify-go.sh
