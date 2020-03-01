@@ -12,8 +12,12 @@ $(1)
 endef
 
 # Generate ProtoBuf implementation for Go.
-.PHONY: gen-go
-gen-go:
+.PHONY: gen-go-ci
+gen-go-ci:
 	rm -rf ./$(GENDIR)
 	$(foreach file,$(PROTO_FILES),$(call exec-command,protoc --go_out=plugins=grpc:$(GOPATH)/src $(file)))
+
+# Generate ProtoBuf implementation for Go.
+.PHONY: gen-go
+gen-go: gen-go-ci
 	cp -R $(GOPATH)/src/github.com/nilebox/opentelemetry-proto-go-experimental/$(GENDIR) ./gen
