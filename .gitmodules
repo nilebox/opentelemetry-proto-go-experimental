@@ -1,4 +1,4 @@
 [submodule "proto"]
 	path = proto
-	url = git@github.com:nilebox/opentelemetry-proto.git
+	url = https://github.com/nilebox/opentelemetry-proto.git
 	branch = sub
