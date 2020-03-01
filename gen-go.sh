@@ -3,5 +3,5 @@
 set -e
 
 cp -r ./proto/opentelemetry ./opentelemetry
-make gen-go
+make gen-go-ci
 rm -rf ./opentelemetry
